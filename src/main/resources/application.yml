@@ -1,0 +1,40 @@
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+spring:
+  sql:
+    init:
+      mode: never
+  datasource:
+    url: jdbc:postgresql://localhost:5432/registration
+    password: admin
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: marcinmoch757@gmail.com
+    password: dbktcjtuhjasxgip
+    properties:
+      mail:
+        smtp:
+          ssl:
+          auth: true
+          starttls:
+            enable: true
+  liquibase:
+    change-log: classpath:db/master.xml
+    contexts: prod
+#  profiles:
+#    active: prod
+#          connection-timeout: 5000
+#          timeout: 3000
+#          write timeout: 5000

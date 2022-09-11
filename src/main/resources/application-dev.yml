@@ -1,0 +1,32 @@
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+spring:
+  datasource:
+    url: jdbc:h2:mem:test
+  jpa:
+    show-sql: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: marcinmoch757@gmail.com
+    password: dbktcjtuhjasxgip
+    properties:
+      mail:
+        smtp:
+          ssl:
+          auth: true
+          starttls:
+            enable: true
+  liquibase:
+    change-log: classpath:db/master.xml
+    contexts: dev
+#  profiles:
+#    active: dev
+  sql:
+    init:
+      mode: never
+#          connection-timeout: 5000
+#          timeout: 3000
+#          write timeout: 5000
