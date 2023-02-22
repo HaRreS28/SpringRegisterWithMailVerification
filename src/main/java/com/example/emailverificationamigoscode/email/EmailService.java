@@ -16,7 +16,7 @@ import javax.mail.internet.MimeMessage;
 public class EmailService implements EmailSender{
     private final JavaMailSender mailSender;
     private final static Logger LOGGER= LoggerFactory.getLogger(EmailService.class);
-    private final static String FROM="marcinmoch757@gmail.com";
+    private final static String FROM="add your email";
 
     @Override
     @Async
