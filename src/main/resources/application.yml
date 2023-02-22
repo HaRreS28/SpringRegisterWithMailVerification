@@ -8,8 +8,8 @@ spring:
       mode: never
   datasource:
     url: jdbc:postgresql://localhost:5432/registration
-    password: admin
-    username: postgres
+    password: 
+    username: 
   jpa:
     hibernate:
       ddl-auto: validate
@@ -21,8 +21,8 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: marcinmoch757@gmail.com
-    password: dbktcjtuhjasxgip
+    username: 
+    password: 
     properties:
       mail:
         smtp:
